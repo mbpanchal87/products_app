@@ -74,7 +74,7 @@
                 let productList = document.getElementById('product-list');
                 productList.innerHTML = '';
                 data.products.forEach(product => {
-                    const imagePath = `/storage/${product.image}`;
+                    const imagePath = `/${product.image}`;
                     productList.innerHTML += `
                         <div class="col">
                             <div class="card h-100">
@@ -107,7 +107,7 @@
                 let productList = document.getElementById('product-list');
                 productList.innerHTML = '';
                 data.products.forEach(product => {
-                    const imagePath = `/storage/${product.image}`;
+                    const imagePath = `/${product.image}`;
                     productList.innerHTML += `
                         <div class="col">
                             <div class="card h-100">
