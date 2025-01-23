@@ -27,7 +27,9 @@ class AuthController extends Controller
             'phone' => $request->phone,
         ]);
 
-        return redirect('/login');
+        //return redirect('/login');
+        session()->flash('success', 'Registration Successful!');
+        return redirect()->route('login')->with('success', 'Registration Successful!');
     }
     public function showLoginForm()
     {
@@ -48,7 +50,8 @@ class AuthController extends Controller
             return redirect('/product-listing');
         }
 
-        return back()->withErrors(['email' => 'Invalid credentials.']);
+        //return back()->withErrors(['email' => 'Invalid credentials.']);
+        return redirect()->back()->with('error', 'Invalid credentials.');
     }
     public function productListing(Request $request)
     {

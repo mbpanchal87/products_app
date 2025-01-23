@@ -11,6 +11,14 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-4">
+            @if(session('success'))
+                    <div class="alert alert-success text-center">{{ session('success') }}</div>
+            @endif
+            @if (session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
             <div class="card mt-5">
                 <div class="card-header text-center">
                     <h4>Login</h4>
